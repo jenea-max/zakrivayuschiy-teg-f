@@ -309,31 +309,6 @@
   fill: var(--accent-color);
 }
 
-@keyframes focusShadow {
-  0% {
-    box-shadow: 0 0 0 0 var(--accent-color);
-  }
-  100% {
-    box-shadow: 2px 2px 0 var(--accent-color);
-  }
-}
-
-.card__like-button:focus,
-.button-save:focus,
-.close-button:focus {
-  outline: none;
-  animation: focusShadow 0.3s ease-in-out forwards; 
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%); 
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
 .card__like-button::before,
 .button-save::before,
 .close-button:hover::before {
@@ -347,28 +322,12 @@
   z-index: 0;
 }
 
-.card__like-button:hover::before,
-.button-save:hover::before,
-.close-button:hover::before {
-  animation: slideIn 0.5s ease-in-out;
-  transform: translateX(0);
-}
-
 .button-save_text,
 .button__text,
 .floppy {
   position: relative;
   color: var(--color_button_hover);
   mix-blend-mode: difference;
-}
-
-@keyframes slideOut {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
 }
 
 .card__like-button::before,
@@ -382,18 +341,6 @@
   transform: translateX(-100%);
   z-index: 0;
   transition: transform 0.5s ease-in-out; 
-}
-
-.card__like-button:hover::before,
-.button-save:hover::before {
-  animation: slideIn 0.5s ease-in-out;
-  transform: translateX(0);
-}
-
-.card__like-button:not(:hover)::before,
-.button-save:not(:hover)::before {
-  animation: slideOut 0.5s ease-in-out; 
-  transform: translateX(-100%);
 }
 
 .dialog[open] {
