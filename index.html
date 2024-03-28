@@ -19,7 +19,7 @@
   <body class="page">
     <header class="header">
       <div class="header_container">
-        <a class="header_logo">&lt;/html&gt;</a>
+        <a href="#0" class="header_logo">&lt;/html&gt;</a>
         <h1 class="header_title">закрывающий тег</h1>
       </div>
       <nav class="theme-menu header__theme-menu">
@@ -324,13 +324,15 @@
     </main>
     <dialog id="saveModal" class="dialog">
       <div class="dialog_card" >
-        <svg class="floppy_dialog" xmlns="http://www.w3.org/2000/svg" width="39" height="39" fill="currentColor" viewBox=" 0 0 39 39">
+        <svg class="floppy floppy_dialog" xmlns="http://www.w3.org/2000/svg" width="39" height="39" fill="currentColor" viewBox=" 0 0 39 39">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="dialog_text">Вставьте<br>дискету, чтобы продолжить</span>
       </div>
       <div class="close_dialog">
-        <button id="closeButton" class="close-button" onclick="window['saveModal'].close()">OK</button>
+        <button id="closeButton" class="close-button" onclick="window['saveModal'].close()">
+          <span class="button__text">OK</span>
+        </button>
       </div>
     </dialog>
     <script src="./scripts/like.js"></script>
