@@ -211,7 +211,6 @@
   padding: clamp(1.563rem, 0.188vw + 1.518rem, 1.688rem) 25px 25px;
 }
 
-
 .card_paragraph {
   font-family: var(--main-font, monospace, sans-serif);
   font-size: var(--accent-font-size);
@@ -309,9 +308,7 @@
   fill: var(--accent-color);
 }
 
-.card__like-button::before,
-.button-save::before,
-.close-button:hover::before {
+.card__like-button::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -322,7 +319,23 @@
   z-index: 0;
 }
 
-.button-save_text,
+.button-save::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-100%); 
+  z-index: 0;
+}
+
+.button-save_text {
+  position: relative;
+  color: var(--color_button_hover);
+  mix-blend-mode: difference;
+}
+
 .button__text,
 .floppy {
   position: relative;
@@ -330,7 +343,18 @@
   mix-blend-mode: difference;
 }
 
-.card__like-button::before,
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+  z-index: 0;
+  transition: transform 0.5s ease-in-out; 
+}
+
 .button-save::before {
   content: "";
   position: absolute;
@@ -410,6 +434,17 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+}
+
+.close-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-100%); 
+  z-index: 0;
 }
 
 .dialog::backdrop {

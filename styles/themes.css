@@ -1,5 +1,4 @@
 :root.theme-dark {
-  --accent-font: 'PressStart2P';
   --maint-font-weigth: 400;
   --title-card-font-weight: 785;
   --bg-color: #000000;
@@ -32,7 +31,6 @@
 
 @media (prefers-color-scheme:dark) {
   :root {
-    --accent-font: 'PressStart2P';
     --maint-font-weigth: 400;
     --title-card-font-weight: 785;
     --bg-color: #000000;

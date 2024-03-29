@@ -19,8 +19,16 @@
   }
 }
 
-.card__like-button:focus,
-.button-save:focus,
+.card__like-button:focus {
+  outline: none;
+  animation: focusShadow 0.3s ease-in-out forwards; 
+}
+
+.button-save:focus {
+  outline: none;
+  animation: focusShadow 0.3s ease-in-out forwards; 
+}
+
 .close-button:focus {
   outline: none;
   animation: focusShadow 0.3s ease-in-out forwards; 
@@ -35,8 +43,16 @@
   }
 }
 
-.card__like-button:hover::before,
-.button-save:hover::before,
+.card__like-button:hover::before {
+  animation: slideIn 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+.button-save:hover::before {
+  animation: slideIn 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
 .close-button:hover::before {
   animation: slideIn 0.5s ease-in-out;
   transform: translateX(0);
@@ -51,18 +67,25 @@
   }
 }
 
-.card__like-button:hover::before,
+.card__like-button:hover::before {
+  animation: slideIn 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
 .button-save:hover::before {
   animation: slideIn 0.5s ease-in-out;
   transform: translateX(0);
 }
 
-.card__like-button:not(:hover)::before,
-.button-save:not(:hover)::before {
+.card__like-button:not(:hover)::before {
   animation: slideOut 0.5s ease-in-out; 
   transform: translateX(-100%);
 }
 
+.button-save:not(:hover)::before {
+  animation: slideOut 0.5s ease-in-out; 
+  transform: translateX(-100%);
+}
 .like-icon .main-body {
   fill: transparent;
   transition: fill 0.3s ease 0.05s, fill-opacity 0.3s ease 0.05s;
