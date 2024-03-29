@@ -336,7 +336,12 @@
   mix-blend-mode: difference;
 }
 
-.button__text,
+.button__text {
+  position: relative;
+  color: var(--color_button_hover);
+  mix-blend-mode: difference;
+}
+
 .floppy {
   position: relative;
   color: var(--color_button_hover);
